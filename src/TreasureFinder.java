@@ -29,6 +29,7 @@ public class TreasureFinder {
                         isFinish = true;
                         break;
                     }
+
                 }
                 if (isFinish) {
                     break;
