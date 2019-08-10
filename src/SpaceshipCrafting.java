@@ -3,6 +3,7 @@ import java.util.stream.Collectors;
 
 public class SpaceshipCrafting {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         List<Integer> listLiquid = Arrays.stream(scanner.nextLine()
                 .split(" ")).map(Integer::parseInt)
