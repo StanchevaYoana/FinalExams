@@ -4,18 +4,19 @@ public class MakeASalad {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Map<String,Integer> veggies=new LinkedHashMap<String,Integer>(){{
-            put("tomato",80);
-            put("carrot",136);
-            put("lettuce",109);
-            put("potato",215);
+        Map<String, Integer> veggies = new LinkedHashMap<String, Integer>() {{
+            put("tomato", 80);
+            put("carrot", 136);
+            put("lettuce", 109);
+            put("potato", 215);
         }};
-        ArrayDeque<String> vegetables=new ArrayDeque<>();
+
+        ArrayDeque<String> vegetables = new ArrayDeque<>();
         Arrays.stream(scanner.nextLine().split("\\s+"))
                 .filter(x -> x.matches("(tomato|carrot|lettuce|potato)"))
                 .forEach(vegetables::offer);
 
-        ArrayDeque<Integer> salads=new ArrayDeque<>();
+        ArrayDeque<Integer> salads = new ArrayDeque<>();
         Arrays.stream(scanner.nextLine().split("\\s+"))
                 .mapToInt(Integer::parseInt)
                 .forEach(salads::push);
@@ -31,17 +32,15 @@ public class MakeASalad {
         }
         System.out.println();
 
-        if(!salads.isEmpty()){
+        if (!salads.isEmpty()) {
             System.out.println(salads.toString()
-                    .replaceAll("[\\[\\],]",""));
+                    .replaceAll("[\\[\\],]", ""));
         }
 
-        if(!vegetables.isEmpty()){
+        if (!vegetables.isEmpty()) {
             System.out.println(vegetables.toString()
-                    .replaceAll("[\\[\\],]",""));
+                    .replaceAll("[\\[\\],]", ""));
         }
-
     }
-
 }
 
